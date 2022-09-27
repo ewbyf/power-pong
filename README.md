@@ -1,4 +1,4 @@
-<img src="https://imgur.com/uwdE9rt" align="right" width=25%>
+<img src="https://imgur.com/uwdE9rt.png" align="right" width=25%>
 
 Power Pong
 ------------------------------------------
