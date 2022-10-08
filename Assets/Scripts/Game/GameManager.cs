@@ -9,7 +9,11 @@ public class GameManager : MonoBehaviour {
     [SerializeField] private GameObject gameOver;
     [HideInInspector] public int player1Score = 0;
     [HideInInspector] public int player2Score = 0;
-    [HideInInspector] public int scoreToWin = GameSettings.scoreToWin;
+    [HideInInspector] public int scoreToWin;
+
+    void Start() {
+        scoreToWin = GameSettings.scoreToWin;
+    }
 
     public void Player1Goal() {
         player1Score++;

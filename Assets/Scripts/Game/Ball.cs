@@ -112,7 +112,7 @@ public class Ball : MonoBehaviour {
         }
 
         // Collides with shield
-        else if (collision.gameObject.name == "Shield(Clone)") {
+        else if (collision.gameObject.name == "Player Shield(Clone)") {
             Instantiate(hitSFX, transform.position, transform.rotation);
             lastHitPaddle = false;
             Destroy(collision.gameObject);
@@ -126,19 +126,23 @@ public class Ball : MonoBehaviour {
 
         // Scoring
         else if (collision.gameObject.name == "Left Border") {
-            Instantiate(scoreSFX, transform.position, transform.rotation);
-            gameManager.Player2Goal();
+            if (gameManager.player2Score < gameManager.scoreToWin) {
+                Instantiate(scoreSFX, transform.position, transform.rotation);
+                gameManager.Player2Goal();
+            }
             if (gameObject.name == "Ball(Clone)")
                 Destroy(gameObject);
-            else if (gameManager.player2Score != gameManager.scoreToWin)
+            else if (gameManager.player2Score < gameManager.scoreToWin)
                 StartCoroutine(Launch());
         }
         else if (collision.gameObject.name == "Right Border") {
-            Instantiate(scoreSFX, transform.position, transform.rotation);
-            gameManager.Player1Goal();
+            if (gameManager.player1Score < gameManager.scoreToWin) {
+                Instantiate(scoreSFX, transform.position, transform.rotation);
+                gameManager.Player1Goal();
+            }
             if (gameObject.name == "Ball(Clone)")
                 Destroy(gameObject);
-            else if (gameManager.player1Score != gameManager.scoreToWin)
+            else if (gameManager.player1Score < gameManager.scoreToWin)
                 StartCoroutine(Launch());
         }
 

@@ -1225,6 +1225,7 @@ GameObject:
   - component: {fileID: 321995327}
   - component: {fileID: 321995326}
   - component: {fileID: 321995330}
+  - component: {fileID: 321995331}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -1329,6 +1330,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00bce5c6ba9f1844eabfb25dacc1d2bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &321995331
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 321995325}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd4eb4530350c7740b46220d210f34ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clickSFX: {fileID: 187612550923878159, guid: 0c54de799839e5a4c90d7ec4d0690e17, type: 3}
 --- !u!1 &353086830
 GameObject:
   m_ObjectHideFlags: 0
@@ -2587,7 +2601,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1615655548}
+      - m_Target: {fileID: 321995331}
         m_TargetAssemblyTypeName: ClickSound, Assembly-CSharp
         m_MethodName: PlaySound
         m_Mode: 1
@@ -2862,7 +2876,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1615655548}
+      - m_Target: {fileID: 321995331}
         m_TargetAssemblyTypeName: ClickSound, Assembly-CSharp
         m_MethodName: PlaySound
         m_Mode: 1
@@ -3130,7 +3144,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1615655548}
+      - m_Target: {fileID: 321995331}
         m_TargetAssemblyTypeName: ClickSound, Assembly-CSharp
         m_MethodName: PlaySound
         m_Mode: 1
@@ -5057,7 +5071,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1615655548}
+      - m_Target: {fileID: 321995331}
         m_TargetAssemblyTypeName: ClickSound, Assembly-CSharp
         m_MethodName: PlaySound
         m_Mode: 1

@@ -17,6 +17,15 @@ public class GameSettings : MonoBehaviour {
     private float[] paddleSizeArray = {.5f, .75f, 1f, 1.25f, 1.5f};
     private float[] paddleSpeedArray = {.5f, .75f, 1f, 1.25f, 1.5f};
 
+    void Start() {
+        scoreToWin = 7;
+        ballSize = 1f;
+        ballSpeed = 1f;
+        itemSpawn = 10f;
+        paddleSize = 1f;
+        paddleSpeed = 1f;
+    }
+
     public void Plus(GameObject obj) {
         if (obj.name == "Score to Win Value") {
             int index = Array.IndexOf(scoreToWinArray, scoreToWin);
